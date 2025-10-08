@@ -3,58 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>Google Holiday Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body>
+<body class="holiday-theme">
+    <div class="snowflakes" aria-hidden="true">
+        <span>❄</span>
+        <span>✶</span>
+        <span>✵</span>
+        <span>❅</span>
+        <span>❆</span>
+        <span>✷</span>
+        <span>❄</span>
+        <span>✶</span>
+        <span>❅</span>
+        <span>❆</span>
+        <span>✵</span>
+        <span>✷</span>
+    </div>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Gmail</a></li>
-                <li><a href="#">Images</a></li>
-                <li><a href="#"><span class="material-symbols-outlined">apps</span></a></li>
-                <li><button>Sign in</button></li>
-            </ul>
+    <header class="top-bar">
+        <div class="top-bar__greeting">
+            <span class="material-symbols-outlined" aria-hidden="true">celebration</span>
+            <span>Happy Holidays from Google!</span>
+        </div>
+        <nav class="top-bar__nav" aria-label="Primary">
+            <a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a>
+            <a href="https://www.google.com/imghp" target="_blank" rel="noopener">Images</a>
+            <a href="https://www.google.com/doodles" target="_blank" rel="noopener">Holiday Doodles</a>
+            <button type="button" class="icon-button" aria-label="Google apps">
+                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+            </button>
+            <button type="button" class="icon-button profile" aria-label="Profile">
+                <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            </button>
+            <button type="button" class="sign-in">Sign in</button>
         </nav>
     </header>
 
     <main>
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
-        
-        <div class="search-bar">
-            <span class="material-symbols-outlined search-icon">search</span>
-            <input type="text" id="searchInput">
-            <span class="material-symbols-outlined mic-icon">mic</span>
-        </div>
+        <section class="doodle" aria-labelledby="doodle-title">
+            <div class="holiday-doodle" role="img" aria-label="Google holiday logo">
+                <span class="letter letter-g">G</span>
+                <span class="letter letter-o">o</span>
+                <span class="letter letter-o">o</span>
+                <span class="letter letter-g">g</span>
+                <span class="letter letter-l">l</span>
+                <span class="letter letter-e">e</span>
+                <div class="doodle-lights" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <p id="doodle-title" class="doodle-caption">Celebrating togetherness with a festive Google doodle.</p>
+        </section>
 
-        <div class="search-buttons">
-            <button id="googleSearchBtn">Google Search</button>
-            <button id="luckyBtn">I'm Feeling Lucky</button>
-        </div>
+        <section class="search-panel" aria-label="Search">
+            <form id="searchForm" class="search-bar" role="search" aria-label="Google search">
+                <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
+                <input type="text" id="searchInput" name="q" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search" required>
+                <button type="button" id="clearBtn" class="icon-button" aria-label="Clear search">
+                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                </button>
+                <button type="button" class="icon-button" aria-label="Use voice search">
+                    <span class="material-symbols-outlined" aria-hidden="true">mic</span>
+                </button>
+                <button type="button" class="icon-button" aria-label="Search by image">
+                    <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+                </button>
+            </form>
+            <ul id="suggestionsList" class="search-suggestions" role="listbox" aria-label="Search suggestions"></ul>
+            <div class="search-buttons">
+                <button type="button" id="googleSearchBtn">Google Search</button>
+                <button type="button" id="luckyBtn">I'm Feeling Lucky</button>
+            </div>
+            <div class="search-quick-links" aria-label="Quick holiday searches">
+                <button type="button" data-query="holiday recipes">Holiday recipes</button>
+                <button type="button" data-query="gift ideas 2023">Gift ideas</button>
+                <button type="button" data-query="winter destinations">Winter destinations</button>
+                <button type="button" data-query="christmas playlists">Christmas playlists</button>
+            </div>
+            <div class="search-languages">
+                Google offered in: 
+                <a href="https://www.google.com/setprefs?sig=0_" lang="es" target="_blank" rel="noopener">Español</a>
+                <a href="https://www.google.com/setprefs?sig=0_" lang="fr" target="_blank" rel="noopener">Français</a>
+                <a href="https://www.google.com/setprefs?sig=0_" lang="de" target="_blank" rel="noopener">Deutsch</a>
+                <a href="https://www.google.com/setprefs?sig=0_" lang="it" target="_blank" rel="noopener">Italiano</a>
+            </div>
+        </section>
+
+        <section class="trending" aria-labelledby="trending-title">
+            <div class="section-heading">
+                <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                <h2 id="trending-title">Holiday trending searches</h2>
+            </div>
+            <div class="trend-grid" id="trendGrid"></div>
+        </section>
+
+        <section class="holiday-highlights" aria-labelledby="highlights-title">
+            <div class="section-heading">
+                <span class="material-symbols-outlined" aria-hidden="true">snowing</span>
+                <h2 id="highlights-title">Seasonal highlights</h2>
+            </div>
+            <div class="highlights-grid">
+                <article class="highlight-card">
+                    <h3>Track Santa's journey</h3>
+                    <p>Follow St. Nick and explore festive games on the <a href="https://santatracker.google.com/" target="_blank" rel="noopener">Google Santa Tracker</a>.</p>
+                </article>
+                <article class="highlight-card">
+                    <h3>Holiday arts &amp; crafts</h3>
+                    <p>Get creative with printable coloring sheets and origami tutorials curated for the season.</p>
+                </article>
+                <article class="highlight-card">
+                    <h3>Festive movies marathon</h3>
+                    <p>Search top-rated classics and new holiday releases to keep the whole family entertained.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-location">
-            South Africa
-        </div>
+        <div class="footer-location">South Africa</div>
         <div class="footer-links">
-            <div class="links-left">
+            <div>
+                <h3>About Google</h3>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Advertising</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">How Search works</a></li>
+                    <li><a href="https://about.google" target="_blank" rel="noopener">Our story</a></li>
+                    <li><a href="https://www.google.com/intl/en/jobs/" target="_blank" rel="noopener">Careers</a></li>
+                    <li><a href="https://blog.google" target="_blank" rel="noopener">Blog</a></li>
                 </ul>
             </div>
-            <div class="links-right">
+            <div>
+                <h3>Advertising</h3>
                 <ul>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="https://ads.google.com" target="_blank" rel="noopener">Google Ads</a></li>
+                    <li><a href="https://marketingplatform.google.com" target="_blank" rel="noopener">Digital Garage</a></li>
+                    <li><a href="https://www.thinkwithgoogle.com" target="_blank" rel="noopener">Think with Google</a></li>
                 </ul>
             </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="https://support.google.com" target="_blank" rel="noopener">Help Center</a></li>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+                    <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made with ❄ for a festive Google experience.</p>
         </div>
     </footer>
 

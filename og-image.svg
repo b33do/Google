@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SNPR Holdings branding">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#122034" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="140" width="1040" height="350" rx="24" fill="rgba(255,255,255,0.04)" stroke="#1f9bff" stroke-opacity="0.3" stroke-width="2"/>
+  <text x="120" y="240" fill="#8bd7ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2">SNPR HOLDINGS (PTY) LTD</text>
+  <text x="120" y="300" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="700">Engineering services & construction delivery</text>
+  <text x="120" y="360" fill="#c7cfdd" font-family="Inter, Arial, sans-serif" font-size="26">Consulting · Supply & installation · Subcontracting · Project oversight</text>
+  <text x="120" y="420" fill="#8bd7ff" font-family="Inter, Arial, sans-serif" font-size="24">Contact: Rhulani Ngobeni — Rhulani@protonmail.com — +27 72 589 6916</text>
+</svg>

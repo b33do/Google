@@ -3,162 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Holiday Search</title>
+    <title>SNPR Holdings (Pty) Ltd | Engineering Services & Construction</title>
+    <meta name="description" content="SNPR Holdings (Pty) Ltd provides engineering services, supply and installation, subcontracting, and construction support across South Africa." />
+    <meta property="og:title" content="SNPR Holdings (Pty) Ltd" />
+    <meta property="og:description" content="Engineering services, supply and installation, subcontracting, and construction support led by Rhulani Ngobeni." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="og-image.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="holiday-theme">
-    <div class="snowflakes" aria-hidden="true">
-        <span>❄</span>
-        <span>✶</span>
-        <span>✵</span>
-        <span>❅</span>
-        <span>❆</span>
-        <span>✷</span>
-        <span>❄</span>
-        <span>✶</span>
-        <span>❅</span>
-        <span>❆</span>
-        <span>✵</span>
-        <span>✷</span>
-    </div>
-
-    <header class="top-bar">
-        <div class="top-bar__greeting">
-            <span class="material-symbols-outlined" aria-hidden="true">celebration</span>
-            <span>Happy Holidays from Google!</span>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="brand__mark" aria-hidden="true">SNPR</div>
+            <div class="brand__text">
+                <span class="brand__name">SNPR Holdings (Pty) Ltd</span>
+                <span class="brand__tagline">Engineering services • Supply & Install • Construction</span>
+            </div>
         </div>
-        <nav class="top-bar__nav" aria-label="Primary">
-            <a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a>
-            <a href="https://www.google.com/imghp" target="_blank" rel="noopener">Images</a>
-            <a href="https://www.google.com/doodles" target="_blank" rel="noopener">Holiday Doodles</a>
-            <button type="button" class="icon-button" aria-label="Google apps">
-                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-            </button>
-            <button type="button" class="icon-button profile" aria-label="Profile">
-                <span class="material-symbols-outlined" aria-hidden="true">person</span>
-            </button>
-            <button type="button" class="sign-in">Sign in</button>
+        <nav class="nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Capabilities</a>
+            <a href="#contact" class="nav__cta">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="doodle" aria-labelledby="doodle-title">
-            <div class="holiday-doodle" role="img" aria-label="Google holiday logo">
-                <span class="letter letter-g">G</span>
-                <span class="letter letter-o">o</span>
-                <span class="letter letter-o">o</span>
-                <span class="letter letter-g">g</span>
-                <span class="letter letter-l">l</span>
-                <span class="letter letter-e">e</span>
-                <div class="doodle-lights" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <section class="hero" id="top">
+            <div class="hero__content">
+                <p class="eyebrow">Engineering & Construction Partner</p>
+                <h1>Reliable engineering services from concept to completion.</h1>
+                <p class="lede">SNPR Holdings, led by founder and director Rhulani Ngobeni, provides engineering consulting, technology-driven solutions, and construction support across South Africa.</p>
+                <div class="hero__actions">
+                    <a class="button primary" href="#contact">Start a project</a>
+                    <a class="button ghost" href="#services">See our services</a>
+                </div>
+                <dl class="contact-list">
+                    <div>
+                        <dt>Phone</dt>
+                        <dd><a href="tel:+27725896916">+27 72 589 6916</a></dd>
+                    </div>
+                    <div>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:Rhulani@protonmail.com">Rhulani@protonmail.com</a></dd>
+                    </div>
+                    <div>
+                        <dt>Location</dt>
+                        <dd>South Africa</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="hero__card" role="presentation">
+                <div class="stat">
+                    <span class="stat__label">Sole Director</span>
+                    <span class="stat__value">Rhulani Ngobeni</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__label">Focus</span>
+                    <span class="stat__value">Engineering, construction, and technology integration</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__label">Services</span>
+                    <span class="stat__value">Consulting, supply & installation, subcontracting, and project delivery</span>
                 </div>
             </div>
-            <p id="doodle-title" class="doodle-caption">Celebrating togetherness with a festive Google doodle.</p>
         </section>
 
-        <section class="search-panel" aria-label="Search">
-            <form id="searchForm" class="search-bar" role="search" aria-label="Google search">
-                <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
-                <input type="text" id="searchInput" name="q" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search" required>
-                <button type="button" id="clearBtn" class="icon-button" aria-label="Clear search">
-                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-                <button type="button" class="icon-button" aria-label="Use voice search">
-                    <span class="material-symbols-outlined" aria-hidden="true">mic</span>
-                </button>
-                <button type="button" class="icon-button" aria-label="Search by image">
-                    <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
-                </button>
-            </form>
-            <ul id="suggestionsList" class="search-suggestions" role="listbox" aria-label="Search suggestions"></ul>
-            <div class="search-buttons">
-                <button type="button" id="googleSearchBtn">Google Search</button>
-                <button type="button" id="luckyBtn">I'm Feeling Lucky</button>
+        <section class="section" id="about">
+            <div class="section__header">
+                <p class="eyebrow">About SNPR Holdings</p>
+                <h2>Practical engineering guidance backed by hands-on experience.</h2>
             </div>
-            <div class="search-quick-links" aria-label="Quick holiday searches">
-                <button type="button" data-query="holiday recipes">Holiday recipes</button>
-                <button type="button" data-query="gift ideas 2023">Gift ideas</button>
-                <button type="button" data-query="winter destinations">Winter destinations</button>
-                <button type="button" data-query="christmas playlists">Christmas playlists</button>
-            </div>
-            <div class="search-languages">
-                Google offered in: 
-                <a href="https://www.google.com/setprefs?sig=0_" lang="es" target="_blank" rel="noopener">Español</a>
-                <a href="https://www.google.com/setprefs?sig=0_" lang="fr" target="_blank" rel="noopener">Français</a>
-                <a href="https://www.google.com/setprefs?sig=0_" lang="de" target="_blank" rel="noopener">Deutsch</a>
-                <a href="https://www.google.com/setprefs?sig=0_" lang="it" target="_blank" rel="noopener">Italiano</a>
+            <div class="grid two">
+                <p>SNPR Holdings (Pty) Ltd is a South African company providing engineering services, procurement and installation, subcontracting support, and construction delivery. With a foundation in computational mathematics and computer engineering, we bridge technical insight with on-site execution to keep projects on schedule and within scope.</p>
+                <p>Founder and director <strong>Rhulani Ngobeni</strong> blends IT leadership and electrical engineering expertise to deliver resilient infrastructure. We coordinate cross-functional teams, manage complex data and network environments, and ensure safe, standards-driven implementation.</p>
             </div>
         </section>
 
-        <section class="trending" aria-labelledby="trending-title">
-            <div class="section-heading">
-                <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
-                <h2 id="trending-title">Holiday trending searches</h2>
+        <section class="section section--panel" id="services">
+            <div class="section__header">
+                <p class="eyebrow">Services</p>
+                <h2>What we do</h2>
+                <p class="section__lede">Full-service support for engineering, supply, installation, and construction projects.</p>
             </div>
-            <div class="trend-grid" id="trendGrid"></div>
+            <div class="grid four">
+                <article class="card">
+                    <h3>Engineering services & consulting</h3>
+                    <ul>
+                        <li>Systems analysis, design reviews, and risk assessments</li>
+                        <li>Technical documentation and standards compliance</li>
+                        <li>Infrastructure planning and optimisation</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Supply & installation</h3>
+                    <ul>
+                        <li>Procurement of electrical and IT hardware</li>
+                        <li>Installation and commissioning support</li>
+                        <li>Quality checks and stakeholder sign-off</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Subcontracting & project support</h3>
+                    <ul>
+                        <li>Team coordination and site supervision</li>
+                        <li>Schedule tracking and risk mitigation</li>
+                        <li>Client reporting and on-site testing</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Construction & infrastructure</h3>
+                    <ul>
+                        <li>Build and installation oversight</li>
+                        <li>Safety-focused workflows</li>
+                        <li>Integration with IT and operational systems</li>
+                    </ul>
+                </article>
+            </div>
         </section>
 
-        <section class="holiday-highlights" aria-labelledby="highlights-title">
-            <div class="section-heading">
-                <span class="material-symbols-outlined" aria-hidden="true">snowing</span>
-                <h2 id="highlights-title">Seasonal highlights</h2>
+        <section class="section" id="experience">
+            <div class="section__header">
+                <p class="eyebrow">Experience</p>
+                <h2>Leadership and delivery in complex environments</h2>
             </div>
-            <div class="highlights-grid">
-                <article class="highlight-card">
-                    <h3>Track Santa's journey</h3>
-                    <p>Follow St. Nick and explore festive games on the <a href="https://santatracker.google.com/" target="_blank" rel="noopener">Google Santa Tracker</a>.</p>
+            <div class="timeline">
+                <article class="timeline__item">
+                    <div class="timeline__date">2024 — Present</div>
+                    <div class="timeline__content">
+                        <h3>IT Manager — Nomagaciro Group</h3>
+                        <p>Direct oversight of on-site construction projects, coordinating teams, schedules, and client communications to keep deliveries aligned with scope.</p>
+                    </div>
                 </article>
-                <article class="highlight-card">
-                    <h3>Holiday arts &amp; crafts</h3>
-                    <p>Get creative with printable coloring sheets and origami tutorials curated for the season.</p>
+                <article class="timeline__item">
+                    <div class="timeline__date">2020 — 2024</div>
+                    <div class="timeline__content">
+                        <h3>Senior Developer — Nomagaciro Group</h3>
+                        <p>Managed data migrations from local servers to Microsoft Azure, documented network infrastructures, and executed on-site testing for wireless and fibre deployments.</p>
+                    </div>
                 </article>
-                <article class="highlight-card">
-                    <h3>Festive movies marathon</h3>
-                    <p>Search top-rated classics and new holiday releases to keep the whole family entertained.</p>
+            </div>
+        </section>
+
+        <section class="section section--panel" id="education">
+            <div class="grid two">
+                <div>
+                    <p class="eyebrow">Education</p>
+                    <h2>University of South Africa (UNISA)</h2>
+                    <p><strong>BSc in Applied Mathematics and Computer Engineering</strong> — four years of coursework, with additional computer engineering modules completed.</p>
+                </div>
+                <div>
+                    <p class="eyebrow">Certifications</p>
+                    <ul class="chips">
+                        <li>Azure Fundamentals</li>
+                        <li>Microsoft Azure Networking</li>
+                        <li>CompTIA A+</li>
+                        <li>CCNA (Active)</li>
+                        <li>Google Courses (Android Development, Data & AI)</li>
+                        <li>Python for Finance (London School of Economics)</li>
+                        <li>High-Performance Python (University of San Diego)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section__header">
+                <p class="eyebrow">Capabilities</p>
+                <h2>Technical strengths</h2>
+                <p class="section__lede">Blending hands-on engineering with software and data expertise.</p>
+            </div>
+            <div class="grid three">
+                <article class="card">
+                    <h3>Programming & data</h3>
+                    <p>Python (libraries), MATLAB, R, SQL, HTML/CSS, JavaScript.</p>
                 </article>
+                <article class="card">
+                    <h3>Infrastructure</h3>
+                    <p>Network topologies, wireless and fibre testing, Azure cloud migrations, IT hardware procurement.</p>
+                </article>
+                <article class="card">
+                    <h3>Project delivery</h3>
+                    <p>Team leadership, coordination, task prioritisation, documentation, and client-facing communication.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--cta" id="contact">
+            <div class="cta">
+                <div class="cta__content">
+                    <p class="eyebrow">Let’s build together</p>
+                    <h2>Ready to discuss your next project?</h2>
+                    <p>We support tenders, consulting engagements, and hands-on construction delivery. Share your requirements and we will respond promptly.</p>
+                    <div class="contact-channels">
+                        <a href="mailto:Rhulani@protonmail.com" class="channel">Rhulani@protonmail.com</a>
+                        <a href="tel:+27725896916" class="channel">+27 72 589 6916</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+                    <div class="field">
+                        <label for="message">Project details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about the scope, location, and timeline" required></textarea>
+                    </div>
+                    <button type="submit" class="button primary" id="submitButton">Send enquiry</button>
+                    <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-location">South Africa</div>
-        <div class="footer-links">
-            <div>
-                <h3>About Google</h3>
-                <ul>
-                    <li><a href="https://about.google" target="_blank" rel="noopener">Our story</a></li>
-                    <li><a href="https://www.google.com/intl/en/jobs/" target="_blank" rel="noopener">Careers</a></li>
-                    <li><a href="https://blog.google" target="_blank" rel="noopener">Blog</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Advertising</h3>
-                <ul>
-                    <li><a href="https://ads.google.com" target="_blank" rel="noopener">Google Ads</a></li>
-                    <li><a href="https://marketingplatform.google.com" target="_blank" rel="noopener">Digital Garage</a></li>
-                    <li><a href="https://www.thinkwithgoogle.com" target="_blank" rel="noopener">Think with Google</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="https://support.google.com" target="_blank" rel="noopener">Help Center</a></li>
-                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
-                    <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Made with ❄ for a festive Google experience.</p>
+    <footer class="footer">
+        <div>SNPR Holdings (Pty) Ltd — Engineering, supply & installation, subcontracting, and construction.</div>
+        <div class="footer__links">
+            <a href="mailto:Rhulani@protonmail.com">Email</a>
+            <a href="tel:+27725896916">Call</a>
         </div>
     </footer>
 

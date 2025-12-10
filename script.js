@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const hint = document.getElementById('formHint');
     const submitButton = document.getElementById('submitButton');
+    const defaultHint = hint?.textContent || '';
 
     if (!contactForm) return;
 
@@ -36,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             submitButton.disabled = false;
             submitButton.textContent = 'Send enquiry';
-            hint.textContent = '';
+            hint.textContent = defaultHint;
         }, 3000);
     });
 });
